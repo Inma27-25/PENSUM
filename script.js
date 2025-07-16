@@ -12,13 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
     function desbloquearMaterias() {
         materias.forEach(btn => {
             const prereqs = btn.dataset.prerequisitos ? btn.dataset.prerequisitos.split(",") : [];
-            if (!btn.classList.contains("aprobada") && prereqs.length > 0 && prereqs[0] !== "") {
+            if (prereqs.length > 0 && prereqs[0] !== "") {
                 const requisitosAprobados = prereqs.every(id => {
                     const req = document.getElementById(id.trim());
                     return req && req.classList.contains("aprobada");
                 });
                 btn.disabled = !requisitosAprobados;
-            } else if (prereqs.length === 0 || prereqs[0] === "") {
+                if (requisitosAprobados) {
+                    btn.classList.add("desbloqueada");
+                } else {
+                    btn.classList.remove("desbloqueada");
+                }
+            } else {
                 btn.disabled = false;
             }
         });
