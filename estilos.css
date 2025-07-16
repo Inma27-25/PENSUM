@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+.anio1 {
+    color: #4caf50;
+}
+
+.anio2 {
+    color: #8bc34a;
+}
+
+.anio3 {
+    color: #cddc39;
+}
+
+.anio4 {
+    color: #fbc02d;
+}
+
+.anio5 {
+    color: #ffee58;
+}
+
+h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.materia {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+}
+
+.anio1 {
+    background-color: #e8f5e9;
+}
+.anio2 {
+    background-color: #f0f4c3;
+}
+.anio3 {
+    background-color: #f9fbe7;
+}
+.anio4 {
+    background-color: #fffde7;
+}
+.anio5 {
+    background-color: #fff9c4;
+}
+
+.materia:hover {
+    opacity: 0.8;
+}
+
+.materia:disabled {
+    background-color: #e0e0e0 !important;
+    border: 1px dashed #aaa;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.materia.aprobada {
+    background-color: #388e3c !important;
+    color: white;
+    border: 2px solid #1b5e20;
+}
